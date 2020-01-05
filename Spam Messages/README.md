@@ -1,0 +1,3 @@
+### Spam Classifier for Text Messages
+
+Dataset Source: https://storage.googleapis.com/kaggle-data-sets/2050/3494/bundle/archive.zip?GoogleAccessId=web-data@kaggle-161607.iam.gserviceaccount.com&Expires=1578510118&Signature=dictdVOMVK19PCLaONYqTWSSxqDw4Av0c%2F%2BPseqR7YD5pj53YN9E%2Bu81mMR62vCkUHZUxOyn5453bavt2BPNQElQZsDZmGQySavsAK3SfRtr%2FQSol7e4t6atbw2O4xZXoXHJ%2FzVdmx35k%2BljAXuKEd6OydM8jEPnUj6v7XydtHuU%2BsZ4b3654WGwOA%2BPjyTkgzuAmgbEMHSGuEkzTNx9qfCDOzJheehk0MW2rvc1gWC2jr1ByRZgYEHhoMU2WQ4k0Xu17xe5WAyfVYowwUniAoZTiiDH2DC0JLS%2Fp%2BoxTTyyUjdRmA8uhrwfARFZghCj8VDeZnGS87J7gXa8tDn%2F%2BQ%3D%3D&response-content-disposition=attachment%3B+filename%3Dspam-text-message-classification.zip
