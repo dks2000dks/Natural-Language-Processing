@@ -17,7 +17,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer 
  
 
-df = pd.read_csv('SPAM Text Message Data.csv',sep=',')															#Importing the .csv for data analysis
+df = pd.read_csv('SPAM Text Message Data.csv',sep=',')										#Importing the .csv for data analysis
 print (df.head())																			#Prints first 5 rows
 print ("--------------------------------------------------------------------------")
 print (df.shape)																			#Dimensions of the data
