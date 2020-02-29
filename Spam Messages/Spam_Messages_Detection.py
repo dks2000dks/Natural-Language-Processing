@@ -1,4 +1,4 @@
-# Dataset is avaible in Kaggle
+# Dataset is available in Kaggle
 
 import pandas as pd
 import numpy as np
