@@ -453,6 +453,7 @@ print ()
 
 	
 """"Testing the Model"""
+
 Test = input('Enter a Hindi Word ')
 T = cleanHindiVocab(Test)[0]
 Test_T = cleanHindiVocab(Test)
@@ -462,3 +463,21 @@ print (R)
 En = Encode_Words(Test_T,Hindi_IndexMap,Max_Hindi_Word)
 Prediction = Predict_Sequence(model,English_Chars,En,Loss=False)
 print ("Predicted Translation for the Word %s is %s" % (W,Prediction))
+
+
+Test = input('Enter a Hindi Sentence ')
+T = cleanHindiVocab(Test)
+Output = " "
+Output_Words = []
+
+for t in T:
+	Input = []
+	Input.append(t)
+	
+	W,R = IndexRepresentation(t,Hindi_IndexMap)
+	En = Encode_Words(Input,Hindi_IndexMap,Max_Hindi_Word)
+	Prediction = Predict_Sequence(model,English_Chars,En,Loss=False)
+	Output_Words.append(Prediction)
+	
+Prediction = Output.join(Output_Words)
+print ("Predicted Translation for the Word %s is %s" % (Test,Prediction))
