@@ -25,3 +25,7 @@ Data is extracted from Wikipedia.
 ### Self-Learning Based AI ChatBot
 
 Data is in chatterbot_corpus folder.
+
+## Image-Captioning
+
+Generating Captions for Images.
