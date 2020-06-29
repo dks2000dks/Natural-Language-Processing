@@ -2,11 +2,11 @@
 
 ## Spam Classifier
 
-*We will build a Sequential Model to Classify Messages.*
+We will build a Sequential Model to Classify Messages.
 
 ## Transliteration
 
-*Transliteration is the process of transferring a word from the alphabet of one language to another. We build Transliteration Models for different languages.*
+Transliteration is the process of transferring a word from the alphabet of one language to another. We build Transliteration Models for different languages.
 
 1) German-English
 
@@ -14,9 +14,9 @@
 
 ## ChatBots
 
-*Creating Retrieval Based and Self-Learning Based ChatBots.*
+Creating Retrieval Based and Self-Learning Based ChatBots.
 
-*chatterbot_corpus folder is obtained from the following link https://github.com/gunthercox/chatterbot-corpus .*
+chatterbot_corpus folder is obtained from the following link https://github.com/gunthercox/chatterbot-corpus .
 
 ### Retrieval-Based Machine Learning ChatBot
 
