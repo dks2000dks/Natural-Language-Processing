@@ -1,0 +1,2 @@
+model_checkpoint_path: "Decoder_Weights"
+all_model_checkpoint_paths: "Decoder_Weights"
