@@ -21,7 +21,7 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils import to_categorical
 from keras.utils.vis_utils import plot_model
-from keras.models import Sequential
+from keras.models import Sequential,load_model
 from keras.layers import LSTM
 from keras.layers import Dense
 from keras.layers import Embedding
@@ -160,13 +160,11 @@ class TransLiterationDataLoader():
 """
 Importing Data
 """
-TrainDataloader = TransLiterationDataLoader('NEWS2012-Training-EnHi-13937.xml')
-TestDataloader = TransLiterationDataLoader('NEWS2012-Ref-EnHi-1000.xml')
+TrainDataloader = TransLiterationDataLoader('Dataset/NEWS2012-Training-EnHi-13937.xml')
+TestDataloader = TransLiterationDataLoader('Dataset/NEWS2012-Ref-EnHi-1000.xml')
 print ()
 print ("______________________Data Loader Completed. Data is Loaded___________________")
 print ()
-
-# Fun Tasks
 
 def WordOneHotRep(Word,MapIndex):
 	'''
@@ -401,8 +399,9 @@ model = EncoderDecoder_Model(Hindi_Vocab, Length_English_Chars, Max_Hindi_Word+1
 model.compile(optimizer='adam', loss='categorical_crossentropy')
 print(model.summary())
 
-plot_model(model, to_file='Model.png', show_shapes=True)
-model.fit(TrainX, TrainY, epochs=10, batch_size=64, validation_data=(TestX, TestY), verbose=2)
+plot_model(model, to_file='Images/Model.png', show_shapes=True)
+model.fit(TrainX, TrainY, epochs=30, batch_size=64, validation_data=(TestX, TestY), verbose=2)
+model.save("EnglishHindi.h5")
 
 def Predict_Sequence(model, List, source,Loss=True):
 	prediction = model.predict(source, verbose=0)[0]
@@ -450,34 +449,3 @@ Evaluate_Model(model, English_Chars, TestX[0::10], TestHindi[0::10], TestEnglish
 print ()
 print ("--------------------------------------------------------------")
 print ()
-
-	
-""""Testing the Model"""
-
-Test = input('Enter a Hindi Word ')
-T = cleanHindiVocab(Test)[0]
-Test_T = cleanHindiVocab(Test)
-W,R = IndexRepresentation(T,Hindi_IndexMap)
-print (W)
-print (R)
-En = Encode_Words(Test_T,Hindi_IndexMap,Max_Hindi_Word)
-Prediction = Predict_Sequence(model,English_Chars,En,Loss=False)
-print ("Predicted Translation for the Word %s is %s" % (W,Prediction))
-
-
-Test = input('Enter a Hindi Sentence ')
-T = cleanHindiVocab(Test)
-Output = " "
-Output_Words = []
-
-for t in T:
-	Input = []
-	Input.append(t)
-	
-	W,R = IndexRepresentation(t,Hindi_IndexMap)
-	En = Encode_Words(Input,Hindi_IndexMap,Max_Hindi_Word)
-	Prediction = Predict_Sequence(model,English_Chars,En,Loss=False)
-	Output_Words.append(Prediction)
-	
-Prediction = Output.join(Output_Words)
-print ("Predicted Translation for the Word %s is %s" % (Test,Prediction))
