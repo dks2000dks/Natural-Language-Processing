@@ -10,7 +10,6 @@ Transliteration is the process of transferring a word from the alphabet of one l
 
 ## ChatBots
 Creating Retrieval Based and Self-Learning Based ChatBots.
-
 chatterbot_corpus folder is obtained from the following link https://github.com/gunthercox/chatterbot-corpus .
 
 ### Retrieval-Based Machine Learning ChatBot
@@ -24,3 +23,6 @@ Generating Captions for Images.
 
 ## BERT Language Model
 Learning how to use BERT Language Model.
+
+## Emotion Detection
+Natural Language Classification Problem. Detecting Emotion from Text.
