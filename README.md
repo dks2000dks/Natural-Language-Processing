@@ -1,4 +1,4 @@
-# Natural-Language-Processing
+# Learning-Natural-Language-Processing
 
 ## Spam Classifier
 We will build a Sequential Model to Classify Messages.
