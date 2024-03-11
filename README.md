@@ -26,3 +26,6 @@ Learning how to use BERT Language Model.
 
 ## Emotion Detection
 Natural Language Classification Problem. Detecting Emotion from Text.
+
+## Music Generation
+Generating Music by creating a A Simple WaveNet Model and LSTM Model.
